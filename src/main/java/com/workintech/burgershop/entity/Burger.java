@@ -27,6 +27,7 @@ public class Burger {
     private boolean isVegan; 
 
     @Column(name = "bread_type")
-    private String breadType;
+    @Enumerated(EnumType.STRING)
+    private BreadType breadType;
     private List<String> contents;
 }
