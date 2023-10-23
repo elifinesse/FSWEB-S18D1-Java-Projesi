@@ -20,7 +20,10 @@ public class Burger {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "price")
     private double  price;
 
     @Column(name = "is_vegan")
@@ -29,5 +32,7 @@ public class Burger {
     @Column(name = "bread_type")
     @Enumerated(EnumType.STRING)
     private BreadType breadType;
-    private List<String> contents;
+
+    @Column(name = "contents")
+    private String contents;
 }
